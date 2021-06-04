@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- blank.html  21 Nov 2019 03:54:41 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+
+	<?php $sistema = info_header_footer();?>
+	<title> <?php echo $sistema->sistema_site_titulo. '&nbsp; | '. (isset($titulo) ? $titulo : 'Não deixa de anunciar') ;?> </title>
+
+	<!-- General CSS Files -->
+	<link rel="stylesheet" href="<?php echo base_url('public/restrita/assets/css/app.min.css'); ?>">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="<?php echo base_url('public/restrita/'); ?>assets/css/style.css">
+	<link rel="stylesheet" href="<?php echo base_url('public/restrita/'); ?>assets/css/components.css">
+	<!-- Custom style CSS -->
+	<link rel="stylesheet" href="<?php echo base_url('public/restrita/'); ?>assets/css/custom.css">
+	<link rel='shortcut icon' type='<?php echo base_url('public/restrita/'); ?>image/x-icon'
+		  href='assets/img/favicon.ico'/>
+
+
+	<?php if (isset($styles)): ?>
+
+		<?php foreach ($styles as $estilo): ?>
+
+			<link rel="stylesheet" href="<?php echo base_url('public/restrita/' . $estilo); ?>">
+
+		<?php endforeach; ?>
+
+	<?php endif; ?>
+
+
+	<!--	CSS-->
+	<style>
+		.select2-container--default .select2-selection--single {
+
+			border: 1px solid #e4e6fc;
+		!important;
+		}
+	</style>
+</head>
+
+<body>
+<div class="loader"></div>
+<div id="app">
